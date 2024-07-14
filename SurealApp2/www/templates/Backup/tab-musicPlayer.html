@@ -1,0 +1,138 @@
+﻿
+
+<ion-view view-title="MusicPlayer" class="background_image">
+    <ion-nav-title>
+        <p class="text-style-title"> Now Playing </p>
+    </ion-nav-title>
+    <ion-content  overflow-scroll="false">
+        <!--initialize the session for this scope-->
+        {{initalizeSession()}}
+
+        <div id="content_panel" class="content_panel" scroll="false">
+            <div id="musicPlayer" class="row">
+
+                <div id="player-2" class="col">
+                    <img src="img/graphLeft.png" class="image-graph" />
+                </div>
+                <div id="player-2" class="col-50">
+
+           
+
+
+                    <div class="progress ng-cloak"><img ng-class="{'animated rotate360 infinite':rotatetrack}" class="player_image_thumb_round" src="{{currentResource.resource_img}}" /></div>
+
+                    <div round-progress
+                         max="max"
+                         current="current"
+                         color="{{ getColor() }}"
+                         bgcolor="{{ bgColor }}"
+                         radius="{{ radius }}"
+                         semi="isSemi"
+                         rounded="rounded"
+                         stroke="{{ stroke }}"
+                         clockwise="clockwise"
+                         responsive="true"
+                         duration="{{ duration }}"
+                         animation="{{ currentAnimation }}"
+                         offset="{{ offset }}"
+                         animation-delay="{{ animationDelay }}"
+                         on-render="showPreciseCurrent">
+
+                        <svg>
+                            <linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">
+                                <stop offset="5%" stop-color="green" />
+                                <stop offset="95%" stop-color="gold" />
+                            </linearGradient>
+                        </svg>
+                    </div>
+                </div>
+
+                <div id="player-2" class="col"><img ng-click="" src="img/graphRight.png" class="image-graph" /></div>
+
+            </div>
+
+            <div id="musicPlayer" class="row">
+                <div id="Time-1" class="text-style-title col">{{ currentTime  }}</div>
+                <div id="Time-2" class="text-style-title col">{{ maxTime  }}</div>
+            </div>
+            <!--     <button ng-click="increment();">Increment</button>
+         <button ng-click="decrement();">Decrement</button>
+         <button ng-click="increment(10);">Increment 10</button>
+         <button ng-click="decrement(10);">Decrement 10</button> -->
+
+            <ion-audio-track track="dynamicTrack" toggle-playback="togglePlayback">
+                <div id="musicPlayer" class="row">
+                    <div id="Time-1" class="text-style-player-song col">{{dynamicTrack.title}}</div>
+                </div>
+                <div id="musicPlayer" class="row">
+                    <div id="Time-1" class="text-style-player-artist col">{{dynamicTrack.artist}}</div>
+                </div>
+                <div id="line-1" class="col">
+                    <img class="horizontal-line" src="img/line.png" />
+                </div>
+
+                <!--**********************************************************************************************************-->
+                <!--- Trending Tabs and Images (slidebox) -->
+                <div id="trending" class="row">
+                    <div class="col">
+                        <a class="a_class" ng-click="tog=1;slideIndex(0);">PLAYER</a> 
+                        <div ng-class='{"hrLine":tog==1}'> </div>
+                    </div>
+                    <div class="col">
+                        <a class="a_class" ng-click="tog=2;slideIndex(1);">LYRICS</a>
+                        <div ng-class='{"hrLine":tog==2}'> </div>
+                    </div>
+                    <div class="col">  
+                        <a class="a_class" ng-click="tog=3;slideIndex(2);">ARTIST</a>            
+                        <div ng-class='{"hrLine":tog==3}'> </div>
+                    </div>
+                </div>
+
+                  
+                    <ion-slide-box delegate-handle="playerSlideBox" does-continue="true" auto-play="false" show-pager="false">
+                        <ion-slide id="player">
+                            <div id="musicPlayer" class="div-center row">
+                                <div id="shuffle" class="col-10"></div>
+                                <div id="back" class="col-80 image-player-cntrl">
+                                    <img src="img/shuffle@2x.png" class="image-player-tiny" />
+                                    <img src="img/previous@2x.png" class="image-player-medium" />
+                                    <ion-audio-controls>
+                                        <a ng-click="timerToggle(0)"  class="image-player-large">  <img src="{{playStateImage}}" class="image-player-large" /> </a>
+                                        <ion-spinner icon="ios"></ion-spinner>
+                                    </ion-audio-controls>
+                                     
+                                    <img src="img/next@2x.png" class="image-player-medium" />
+
+                                     <img src="img/repeat@2x.png" class="image-player-tiny" />
+                                </div>
+
+                                <div id="shuffle" class="col-10"></div>
+
+                            </div>
+                        </ion-slide>
+
+                        <ion-slide id="song-lyrics">
+                            <div>
+                                sureal soial
+                            </div>
+                        </ion-slide>
+
+                        <ion-slide id="artist-info">
+                            Sureal Artist Information
+                        </ion-slide>
+
+
+                    </ion-slide-box>
+
+            </ion-audio-track>
+
+
+        </div>
+
+
+      
+    </ion-content>
+
+
+
+</ion-view>

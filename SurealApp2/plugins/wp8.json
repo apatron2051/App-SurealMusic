@@ -1,0 +1,45 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "com.telerik.plugins.nativepagetransitions": {
+            "PACKAGE_NAME": "{250a1790-0e5b-11e6-981a-85dbaf798c06}"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "{250a1790-0e5b-11e6-981a-85dbaf798c06}"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "{250a1790-0e5b-11e6-981a-85dbaf798c06}"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "{250a1790-0e5b-11e6-981a-85dbaf798c06}"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "{250a1790-0e5b-11e6-981a-85dbaf798c06}"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "{250a1790-0e5b-11e6-981a-85dbaf798c06}"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "{250a1790-0e5b-11e6-981a-85dbaf798c06}"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "{250a1790-0e5b-11e6-981a-85dbaf798c06}"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "{250a1790-0e5b-11e6-981a-85dbaf798c06}"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "{250a1790-0e5b-11e6-981a-85dbaf798c06}"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "{250a1790-0e5b-11e6-981a-85dbaf798c06}"
+        }
+    },
+    "dependent_plugins": {}
+}

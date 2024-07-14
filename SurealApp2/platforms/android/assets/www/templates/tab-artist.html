@@ -1,0 +1,153 @@
+﻿
+
+<ion-view view-title="artistview" class="background_image" >
+    <ion-nav-title>
+        <p class="text-style-title"> Artist </p>
+    </ion-nav-title>
+    <ion-content  overflow-scroll="true" ng-controller="artistCtrl">
+        <div id="content_panel" class="content_panel" scroll="false">
+            <div class="text-style-title"><img ng-click="goBack()" src="img/minimize@2x.png" /></div>
+            <div id="profile" class="row">
+                <div class="profile-container horizontal-line-text col">
+                    <img ng-class="{'slide_box_image_event_square': !imagesAreRound, 'slide_box_image_event_round': imagesAreRound}" src="{{artistData.BioPhoto[0].ImageURL}}" />
+                </div>
+            </div>
+            <div id="profileController">
+                <div id="musicPlayer" class="row">
+                    <div id="Time-1" class="text-style-title col">{{artistData.Name}}</div>
+                </div>
+                <div id="musicPlayer" class="row">
+                    <div id="Time-1" class="text-style-body col">{{artistData.TagLine}}</div>
+                </div>
+
+
+                <div id="line-whatsNew" class="row">
+                    <div id="line-1" class="col col-33">
+                        <img class="horizontal-line" src="img/line.png" />
+                    </div>
+                    <div id="line-1" class="col col-33  horizontal-line-text-small">
+                        Info
+                    </div>
+                    <div id="line-1" class="col col-33">
+                        <img class="horizontal-line" src="img/line.png" />
+                    </div>
+                  
+                </div>
+
+
+                <div id="musicPlayer" class="row">
+                    <div id="musicPlayer" class="col-50">
+                      
+                        <div id="musicPlayer" class="row">
+                            <div id="Time-1" class="text-style-body-left col">DOB:</div>
+                        </div>
+                        <div id="musicPlayer" class="row">
+                            <div id="Time-1" class="text-style-body-left col">Location:</div>
+                        </div>
+                    </div>
+
+                    <div id="musicPlayer" class="col-50">
+                       
+                        <div id="musicPlayer" class="row">
+                            <div id="Time-1" class="text-style-body-left col">{{ artistData.DOB  }}</div>
+                        </div>
+                        <div id="musicPlayer" class="row">
+                            <div id="Time-1" class="text-style-body-left col">{{ artistData.Location   }}</div>
+                        </div>
+                       
+                    </div>
+                </div>
+
+                <div id="line-whatsNew" class="row">
+                    <div id="line-1" class="col col-33">
+                        <img class="horizontal-line" src="img/line.png" />
+                    </div>
+                    <div id="line-1" class="col col-33  horizontal-line-text-small">
+                     About
+                    </div>
+                    <div id="line-1" class="col col-33">
+                        <img class="horizontal-line" src="img/line.png" />
+                    </div>
+                </div>
+                <div id="musicPlayer" class="row">
+                    <div id="Time-1" class="text-style-body-left col">{{  artistData.About }}.</div>
+                </div>
+
+                    <div id="line-whatsNew" class="row">
+                        <div id="line-1" class="col col-33">
+                            <img class="horizontal-line" src="img/line.png" />
+                        </div>
+                        <div id="line-1" class="col col-33  horizontal-line-text-small">
+                            Artist Images
+                        </div>
+                        <div id="line-1" class="col col-33">
+                            <img class="horizontal-line" src="img/line.png" />
+                        </div>
+                    </div>
+
+                    <ion-slide-box delegate-handle="eventArtists" id="eventArtists" does-continue="true" auto-play="false" show-pager="false">
+            <ion-slide id="eventArtistsSlide">
+                <ion-spinner icon="circles" class="spinner-energized" ng-class="{'spinner-energized': !artistGetData, 'hide_spinner': artistGetData}"></ion-spinner>
+                <div class="row">
+                    <div id="artists" class="{{ItemCol}} slide-box-container-singleLine  animated bounceIn" ng-repeat="data in artistData.ArtistPhotos">
+                        <img    on-hold="onimgToduch();imgtouchActive = !imgtouchActive"
+                                on-release="imgtouchActive=false"
+                                ng-class="{'slide_box_image_thumb_square': !imagesAreRound, 'slide_box_image_thumb_round':imagesAreRound}"
+                                on-tap="actShowImage(data.ImageURL)"
+                                src="{{data.ImageURL}}" title="{{data.Name}}" />
+                        <p class="slide_box_image_Text">{{data.Name}}</p>
+                    </div>
+                </div>
+            </ion-slide>
+        </ion-slide-box>
+                
+
+                <!--*************************************************************************************************************************-->
+
+                    <div class="background_transparent" ng-include src="'templates/myEventsListContent.html'"></div>
+
+                    
+                      <div class="background_transparent" ng-include src="'templates/myMusicListsContent.html'"></div>
+                <!--*************************************************************************************************************************-->
+
+
+                    <div id="line-1" class="col">
+                        <img class="horizontal-line" src="img/line.png" />
+                    </div>
+
+                    <div id="line-1" class="col horizontal-line-text">
+                        <br />
+                    </div>
+
+                    <div id="musicPlayer" class="row">
+                        <div id="Time-1" class="text-style-body col">SOCIAL NETWORKS</div>
+                    </div>
+                    <div id="line-1" class="col horizontal-line-text">
+
+                    </div>
+
+                    <div id="musicPlayer" class="row">
+                        <p class="text-style-social-networks">
+                            <button type="submit" class="button-img" id="social-btn" onclick="alert('pressed');"><img class="login-social-images" src="images/social-networks.png" /></button>
+                        </p>
+                    </div>
+                </div>
+
+      
+            </div>
+
+        <div class="background_transparent" ng-include src="'templates/bottomSpacer.html'"></div>
+    </ion-content>
+
+    <div ng-controller="MusicPlayerCtrl">
+        <ion-pull-up-footer class="mini-player-background" hide-Header="myMusicPullUpFooter" initial-state="collapsed" default-behavior="expand">
+            <div class="title" id="myMusicPullUpFooter" name="myMusicPullUpFooter" ion-pull-up-trigger ng-include src="'templates/miniPlayerHeader.html'"></div>
+        </ion-pull-up-footer>
+    </div>
+
+
+
+
+
+</ion-view>
+

@@ -1,0 +1,12 @@
+{
+  "name": "surealMusic",
+  "private": true,
+  "devDependencies": {
+    "ionic": "driftyco/ionic-bower#1.2.4"
+  },
+  "dependencies": {
+    "ngCordova": "^0.1.24-alpha",
+    "ionic-native-transitions": "shprink/ionic-native-transitions#^1.0.0-rc9",
+    "ionic-pullup": "^1.0.3"
+  }
+}

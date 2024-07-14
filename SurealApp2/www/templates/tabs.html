@@ -1,0 +1,148 @@
+
+<!---Create tabs with an icon and label, using the tabs-positive style.
+Each tab's child <ion-nav-view> directive will have its own
+navigation history that also transitions its views in and out.-->
+
+<ion-side-menus enable-menu-with-back-views="false">
+    <!--//ion-side-menu-content -->
+    <ion-side-menu-content ion-side-menu-content drag-content="false" > 
+        <ion-nav-bar class="navBar">
+    
+            <ion-nav-back-button>
+            </ion-nav-back-button>  
+           
+
+            <ion-nav-buttons side="left">
+                <button class="button button-icon  ion-navicon" menu-toggle="left"></button>
+            
+            </ion-nav-buttons>
+
+            <ion-nav-buttons side="right">
+                <div class="searchBar" ng-controller="searchbarCtrl">
+                    <div class="searchTxt" ng-show="ngModel.show">
+                        <div class="bgdiv"></div>
+                        <div class="bgtxt">
+                            <input type="text" placeholder="Procurar..." ng-model="inputSearch">
+                        </div>
+                        <div style="text-align:right"> <button class="button button-icon  ion-arrow-right-a" ng-click="goSearch()"></button></div>
+                    </div>
+                    <button class="button button-icon ion-search" ng-click="inputSearch='';ngModel.show=!ngModel.show"></button>
+                </div>
+
+            </ion-nav-buttons>
+            
+
+    </ion-nav-bar>
+            
+            <!-- Include music player header.-->
+            <div ng-controller="MusicPlayerCtrl">
+                <ion-pull-up-footer class="mini-player-background" hide-Header="myMusicPullUpFooter" initial-state="collapsed" default-behavior="expand">
+                    <div class="title" id="myMusicPullUpFooter" name="myMusicPullUpFooter" ion-pull-up-trigger ng-include src="'templates/miniPlayerHeader.html'"></div>
+                </ion-pull-up-footer>
+            </div>
+            <!-- TABS -->
+            <ion-tabs class="tabs-dark tabs-icon-top">
+
+
+
+                <!-- Home Tab -->
+                <ion-tab title="Home" icon-off="icon nav_Home_off" icon-on="icon nav_Home_on" href="#/tab/home">
+                    <ion-nav-view name="tab-home"></ion-nav-view>
+                </ion-tab>
+
+                <!-- My Music Tab -->
+                <ion-tab title="My Music" icon-off="nav_MyMusic_off" icon-on="nav_MyMusic_on" href="#/tab/myMusic">
+                    <ion-nav-view name="tab-myMusic"></ion-nav-view>
+                </ion-tab>
+
+                <!-- Now Playing Tab -->
+                <ion-tab title="My Library" icon-off="nav_nowPlaying_off" icon-on="nav_nowPlaying_on" href="#/tab/myLibrary">
+                    <ion-nav-view name="tab-myLibrary"></ion-nav-view>
+                </ion-tab>
+
+                <!-- Artists -->
+                <ion-tab title="Artists" icon-off="nav_Artists_off" icon-on="nav_Artists_on" href="#/tab/artists">
+                    <ion-nav-view name="tab-chats:detail"></ion-nav-view>
+                </ion-tab>
+
+                <!-- settings -->
+                <ion-tab title="Settings" icon-off="nav_Settings_off" icon-on="nav_Settings_on" href="#/tab/account">
+                    <ion-nav-view name="tab-account"></ion-nav-view>
+                </ion-tab>
+
+
+                <!-- must add hidden tabs to allow left nav to work for items not on nav bar -->
+                <ion-tab hidden="true" href="#/tab/userprofile">
+                    <ion-nav-view name="tab-userprofile"></ion-nav-view>
+                </ion-tab>
+
+
+                <ion-tab hidden="true" href="#/tab/explorer">
+                    <ion-nav-view name="tab-explorer"></ion-nav-view>
+                </ion-tab>
+
+
+                <ion-tab hidden="true" href="#/tab/event">
+                    <ion-nav-view name="tab-event"></ion-nav-view>
+                </ion-tab>
+                
+                <ion-tab hidden="true" href="#/tab/artist">
+                    <ion-nav-view name="tab-artist"></ion-nav-view>
+                </ion-tab>
+
+                <ion-tab hidden="true" href="#/tab/player">
+                    <ion-nav-view name="tab-player"></ion-nav-view>
+                </ion-tab>
+
+                <ion-tab hidden="true" href="#/tab/search">
+                    <ion-nav-view name="tab-search"></ion-nav-view>
+                </ion-tab>
+
+                <ion-tab hidden="true" href="#/tab/dashboard">
+                    <ion-nav-view name="tab-dashboard"></ion-nav-view>
+                </ion-tab>
+            </ion-tabs>
+       
+</ion-side-menu-content>
+  
+
+   <!--  Side Menu (left) --> 
+    <ion-side-menu side="left" class="bar-stable menu-left-axis" >
+
+        <ion-content style="border:none;" scrollbar-x="false" scrollbar-y="false">
+
+            <ion-list style="border:none "  scrollbar-x="false" scrollbar-y="false">
+                <ion-item menu-close href="#/tab/myMusic">
+                    <img class="left_nav_image" src="img/menu_my_music@2x.png" />  My Music
+                </ion-item>
+
+                <ion-item menu-close href="#/tab/browse">
+                    <img  class="left_nav_image" src="img/menu_discover@2x.png" />  Discover
+                </ion-item>
+
+                <ion-item menu-close href="#/tab/explorer">
+                    <img class="left_nav_image"  src="img/menu_explorer@2x.png" />  Explorer
+                </ion-item>
+
+                <ion-item menu-close href="#/tab/userprofile">
+                    <img  class="left_nav_image" src="img/menu_profile@2x.png" /> Profile
+                </ion-item>
+
+                <ion-item menu-close href="#/tab/myLibrary">
+                    <img  class="left_nav_image" src="img/menu_player@2x.png" />  My Library
+                </ion-item>
+
+                <ion-item menu-close href="#/tab/dashboard">
+                    <img class="left_nav_image" src="img/menu_more@2x.png" />  Dashboard
+                </ion-item>
+
+                <ion-item menu-close href="#/tab/more">
+                    <img  class="left_nav_image" src="img/menu_more@2x.png" />  More
+                </ion-item>
+
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>
+
+    

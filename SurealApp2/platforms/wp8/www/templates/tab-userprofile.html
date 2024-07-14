@@ -1,0 +1,82 @@
+﻿
+
+<ion-view view-title="userprofile" class="background_image" ng-controller="ProfileCtrl">
+    <ion-nav-title>
+        <p class="text-style-title"> Profile </p>
+    </ion-nav-title>
+    <ion-content  overflow-scroll="false">
+        <div id="content_panel" class="content_panel" scroll="false">
+            <div id="profile" class="row">
+                <div class="profile-container horizontal-line-text col">
+                    <img class="slide_box_image_thumb_round" src="{{userProfile.profileimage}}" />
+                </div>
+            </div>
+            <div id="profileController">
+                <div id="musicPlayer" class="row">
+                    <div id="Time-1" class="text-style-title col">{{ userProfile.FirstName  }}  {{ userProfile.LastName  }}</div>
+                </div>
+                <div id="musicPlayer" class="row">
+                    <div id="Time-1" class="text-style-body col">{{ userProfile.ProfileTag  }}</div>
+                </div>
+                <div id="musicPlayer" class="row">
+                    <div id="Time-1" class="text-style-body-small col">{{ userProfile.ProfileDesc  }}</div>
+                </div>
+
+                <div id="line-1" class="col horizontal-line-text">
+                 </div>
+
+                <div id="line-1" class="col">
+                    <img class="horizontal-line" src="img/line.png" />
+                </div>
+ 
+                <div id="musicPlayer" class="row">
+                    <div id="Time-1" class="col"><div  class="text-style-title">{{ userProfile.followers  }}
+                        </div> <div class="text-style-body">Followers</div></div>
+
+                    <div id="Time-1" class="col">
+                        <div class="text-style-title">
+                            {{  userProfile.following  }}
+                        </div> <div class="text-style-body">Following</div>
+                    </div>
+
+                    <div id="Time-1" class="col">
+                        <div class="text-style-title">
+                            {{ userProfile.playlists  }}
+                        </div> <div class="text-style-body">Playlists</div>
+                    </div>
+
+               </div>
+
+                <div id="line-1" class="col horizontal-line-text">
+                    <br />
+                </div>
+
+                    <div id="musicPlayer" class="row">
+                        <div id="Time-1" class="text-style-body col">SOCIAL NETWORKS</div>
+                    </div>
+                <div id="line-1" class="col horizontal-line-text">
+                  
+                </div>
+
+                    <div id="musicPlayer" class="row">
+                        <p class="text-style-social-networks">
+                            <button type="submit" class="button-img" id="social-btn" onclick="alert('pressed');"><img class="login-social-images" src="images/social-networks.png" /></button>
+                        </p>
+                    </div>
+                </div>
+
+
+            </div>
+    </ion-content>
+
+    <div ng-controller="MusicPlayerCtrl">
+        <ion-pull-up-footer class="mini-player-background" hide-Header="profilePullUpFooter" initial-state="collapsed" default-behavior="expand">
+            <div class="title" id="profilePullUpFooter" name="profilePullUpFooter" ion-pull-up-trigger ng-include src="'templates/miniPlayerHeader.html'"></div>
+            <div  class="background_image" ng-include src="'templates/miniPlayerContent.html'"></div>
+
+        </ion-pull-up-footer>
+    </div>
+
+
+
+</ion-view>

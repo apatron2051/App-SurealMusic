@@ -1,0 +1,33 @@
+﻿
+
+<div class="mini-player-background" overflow-scroll="false">
+    {{initScreenData()}}
+
+
+        <!--     <button ng-click="increment();">Increment</button>
+        <button ng-click="decrement();">Decrement</button>
+        <button ng-click="increment(10);">Increment 10</button>
+        <button ng-click="decrement(10);">Decrement 10</button> -->
+
+        <ion-audio-track track="dynamicTrack" toggle-playback="togglePlayback">
+            <div id="musicPlayer" class="row" >
+                <div id="back" class="col col-20 image-mini-player-cntrl">
+                    <!--<img src="img/shuffle@2x.png" class="image-mini-player-medium" /> -->
+                    <!---<img src="img/previous@2x.png" class="image-player-medium" />-->
+                    <ion-audio-controls>
+                        <a ng-click="timerToggle(0)">  <img src="{{playStateImage}}" class="image-mini-player-large" /> </a>
+                    </ion-audio-controls>
+                    <ion-spinner icon="circles" class="spinner-energized" ng-class="{'spinner-energized': streamIsLoading, 'hide_spinner': !streamIsLoading}"></ion-spinner>
+
+                    <!--<img src="img/next@2x.png" class="image-player-medium" />-->
+                  <!--  <img src="img/repeat@2x.png" class="image-mini-player-medium" /> -->
+                </div>
+                <div id="Time-1" class="text-style-mini-player-song col col-50">{{currentSongName}}   {{dynamicTrack.artist}}</div>
+
+                <div id="Time-1" class="text-style-mini-player-song col col-15">{{ currentTime  }}</div>
+
+                <div id="Time-1" class="text-style-mini-player-song col col-15">{{currentSongDuration  }}</div>
+        
+            </div>
+        </ion-audio-track>
+ </div>

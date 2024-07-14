@@ -1,0 +1,140 @@
+﻿
+<ion-pull-up-content>
+ <ion-scroll direction="y" scrollbar-y="false" style="height: 100vh" has-bouncing="true" >
+    <div class="text-style-title" ion-pull-down-trigger><img src="img/minimize@3x.png" /></div>
+    <div style="width:100vw">
+        <ion-audio-track track="dynamicTrack" toggle-playback="togglePlayback">
+            {{initScreenData();}}
+
+            <div id="content_panel" class="content_panel" scroll="false">
+               
+                 <div id="musicPlayer" class="row">
+                    <div id="musicPlayerA" class="col">
+                        <img class="player_image_thumb_square" src="{{currentResource.resource_img}}" />
+                    </div>
+                </div>
+
+                <!--Music Player *********************************************************************************-->
+                <div id="musicPlayer" class="row">
+                    <div id="musicPlayerA" class="col col-25">
+                        <div id="Time-1" class="text-style-player col" style="text-align:left">{{currentTime}}</div>
+                    </div>
+                    
+                    <div id="musicPlayerA" class="col col-50" style="text-align:center">
+        
+                        <div id="musicPlayer" class="row">
+                            <div id="Time-1" class="text-style-player-song col">{{currentSongName}}</div>
+                        </div>
+                        <div id="musicPlayer" class="row">
+                            <div id="Time-1" class="text-style-player-artist col">{{dynamicTrack.artist}}</div>
+                        </div>                
+                    </div>
+
+                    <div id="musicPlayerA" class="col col-25">
+                        <div id="Time-2" class="text-style-player col" style="text-align:right">{{currentSongDuration.replace("00:","")}}</div>
+                    </div>
+                </div>
+
+                <!--Music Player *********************************************************************************-->
+                <div id="musicPlayer" class="row">
+                    <div id="musicPlayerA" class="col col-20">
+                      
+                    </div>
+
+                    <div id="musicPlayerA" class="col col-60" style="text-align:center">
+
+                        <img src="img/shuffle@2x.png" class="image-player-tiny" />
+                        <img src="img/previous@2x.png" class="image-player-medium" />
+                        <ion-audio-controls>
+                            <a ng-click="timerToggle(0)" class="image-player-medium">  <img src="{{playStateImage}}" class="image-player-medium" /> </a>
+                            <ion-spinner icon="ios"></ion-spinner>
+                        </ion-audio-controls>
+
+                        <img src="img/next@2x.png" class="image-player-medium" />
+                        <img src="img/repeat@2x.png" class="image-player-tiny" />
+                    </div>
+
+                    <div id="musicPlayerA" class="col col-20">
+                 
+                    </div>
+                </div>
+
+               
+
+                <!--<div id="musicPlayer2" class="row">
+                    <div id="musicPlayer" class="div-center row">
+                       
+                    </div>
+
+                    <div id="line-1" class="col">
+                        <img class="horizontal-line" src="img/line.png" />
+                    </div>
+                </div>-->
+
+                <div id="musicPlayer2" class="row">
+                    <!--**********************************************************************************************************-->
+                    <!--- Trending Tabs and Images (slidebox) -->
+                    <div id="musicPlayer2" class="col">
+                        <div id="trending" class="row">
+                            <div class="col">
+                                <a id="playlistSlide" playlistSlide="1" class="a_class" ng-click="tog=1;slideIndex(0);$event.stopPropagation();">PLAYLIST</a>
+                                <div ng-class='{"hrLine":tog==1}'> </div>
+                            </div>
+                            <div class="col">
+                                <a class="a_class" ng-click="tog=2;slideIndex(1);$event.stopPropagation();">LYRICS</a>
+                                <div ng-class='{"hrLine":tog==2}'> </div>
+                            </div>
+                            <div class="col">
+                                <a class="a_class" ng-click="tog=3;slideIndex(2);$event.stopPropagation();">ARTIST</a>
+                                <div ng-class='{"hrLine":tog==3}'> </div>
+                            </div>
+                        </div>
+                        <!---Add Content to playlist from controller. update currentSongList to match -->
+                        <ion-slide-box delegate-handle="albumDetailSlideBox" does-continue="true" auto-play="false" show-pager="false" style="height:{{playlistViewHeight}}">
+                            <ion-slide id="player">
+                                <ion-spinner icon="circles" class="spinne r-energized" ng-class="{'spinner-energized': !albumDetailPlaylistData, 'hide_spinner': albumDetailPlaylistData}"></ion-spinner>
+
+                                <div class="horizontal-line-text animated slideInLeft" ng-repeat="dataItem in currentSongList" id="album-wn-{{dataItem.Id}}">
+
+                                    <div id="line-album-playlist" class="row player_col player_row_background">
+                                        <div id="line-1" class="player_col col-20">
+                                            <img class="image-player-list"
+                                                 on-touch="onimgTouch();imgtouchActive = !imgtouchActive"
+                                                 on-release="imgtouchActive=false"
+                                                 ng-class="{'animated bounceIn':imgtouchActive}"
+                                                 on-tap="playSongFromList(dataItem.ResourceId, dataItem.Index, dataItem.Id, dataItem.Name, dataItem.SongURL, dataItem.Listtype)"
+                                                 src="{{dataItem.StateImage}}" title="{{dataItem.Name}}" />
+                                        </div>
+                                        <div id="line-1" class="player_col col-60">
+                                            <div class="player_playlist_text">{{dataItem.Name}}</div>
+                                        </div>
+                                        <div id="line-1" class="player_col col-20">
+                                            <div class="player_playlist_text">{{dataItem.Duration.replace("00:", "")}}</div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </ion-slide>
+
+                            <ion-slide id="song-lyrics">
+                                <div>
+                                    Social
+                                </div>
+                            </ion-slide>
+
+                            <ion-slide id="artist-info">
+                                <!--*************************************************************************************************************************-->
+                                <div class="background_transparent" ng-include src="'templates/miniPlayerContentArtist.html'"></div>
+                            </ion-slide>
+
+
+                        </ion-slide-box>
+                    </div>
+                </div>
+            </div>
+        <ion-audio-track>
+    </div>
+</ion-scroll>
+
+</ion-pull-up-content>
+ 

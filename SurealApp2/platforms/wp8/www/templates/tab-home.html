@@ -1,0 +1,92 @@
+
+<ion-view class="background_image">
+    <ion-nav-title>
+       <p class="text-style-title"> Home </p>
+    </ion-nav-title>
+    <ion-content class="background_img" overflow-scroll="false" ng_controller="homeCtrl">
+
+      <!--  <div id="content_panel" class="content_panel">-->
+
+
+
+            <div id="rd-row" class="row">
+                <div id="player-1" class="col col-50">
+
+                    <button class="button button-stable button-clear" ng-click="goNativeTransition('/tab/myMusic')">
+                        <img src="img/home_mymusic@2x.png" class="home_image" />
+                        <p class="text-style-home">
+                            My Music
+                        </p>
+                    </button><br /><br /><br /><br /><br /><br /><br />
+                </div>
+                <div id="Disover-1" class="col col-50">
+
+                    <button class="button button-stable button-clear" ng-click="goNativeTransition('/tab/discover')">
+                        <img src="img/home_discover@2x.png" class="home_image" />
+                        <p class="text-style-home">
+                            Discover
+                        </p>
+                    </button>
+                </div>
+
+            </div>
+            <div id="st-row" class="row">
+                <div id="Explorer-1" class="col col-50">
+
+                    <button class="button button-stable button-clear" ng-click="goNativeTransition('/tab/explorer')">
+                        <img src="img/home_explorer@2x.png" class="home_image" />
+                        <p class="text-style-home">
+                            Explorer
+                        </p>
+                    </button><br /><br /><br /><br /><br /><br /><br />
+
+                </div>
+                <div id="Propfile-1" class="col col-50">
+
+                    <button class="button button-stable button-clear" ng-click="goNativeTransition('/tab/userprofile')">
+                        <img src="img/home_profile@2x.png" class="home_image" />
+                        <p class="text-style-home">
+                            Profile
+                        </p>
+                    </button>
+
+                </div>
+            </div>
+            <div id="nd-row" class="row">
+                <div id="Player-1" class="col col-50">
+
+                    <button class="button button-stable button-clear" ng-click="goNativeTransition('/tab/musicPlayer')">
+                        <img src="img/home_player@2x.png" class="home_image" />
+                        <p class="text-style-home">
+                            Player
+                        </p>
+                    </button>
+                </div>
+                <div id="More-1" class="col col-50">
+
+
+                    <button class="button button-stable button-clear" ng-click="goNativeTransition('/tab/more')">
+
+                        <img src="img/home_more@2x.png" class="home_image" />
+                        <p class="text-style-home">
+                            More
+                        </p>
+                    </button>
+                </div>
+            </div>
+
+       <!-- </div> <!--content_panel -->
+        
+
+</ion-content>
+
+    <div ng-controller="MusicPlayerCtrl">
+        <ion-pull-up-footer class="mini-player-background" hide-Header="homePullUpFooter" initial-state="collapsed" default-behavior="expand">
+            <div class="title" id="homePullUpFooter" name="homePullUpFooter" ion-pull-up-trigger ng-include src="'templates/miniPlayerHeader.html'"></div>
+            <div class="background_image" ng-include src="'templates/miniPlayerContent.html'"></div>
+
+        </ion-pull-up-footer>
+    </div>
+
+</ion-view>
+

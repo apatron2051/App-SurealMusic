@@ -1,0 +1,76 @@
+﻿<div id="whatsnew" class="row">
+    <div class="col">
+        <a class="horizontal-line-text-small"><center>My Music</center></a>
+        <div class="hrLine"> </div>
+    </div>
+</div>
+<div id="line-1" class="col">
+    <img class="horizontal-line" src="img/line.png" />
+</div>
+
+    <div id="Lists"  ng-controller="myMusicLists">
+        <div id="line-whatsNew-vertical" class="row">
+            <div id="line-1" class="col col-33">
+                <div id="line-1" class="horizontal-line-text">
+                   My Play Lists
+                </div>
+                <ion-spinner icon="circles" class="spinner-energized" ng-class="{'spinner-energized': !myMusicWhatsNewPlayListData, 'hide_spinner': myMusicWhatsNewPlayListData}"></ion-spinner>
+
+                <div class="horizontal-line-text" ng-repeat="dataItem in myMusicWhatsNewPlayLists" id="album-wn-{{dataItem.Id}}">
+                    <img
+                         on-hold="onimgTouch();imgtouchActive = !imgtouchActive"
+                         on-release="imgtouchActive=false"
+                         ng-class="{'slide_box_image_thumb_square': !imagesAreRound, 'slide_box_image_thumb_round':imagesAreRound}"
+                         on-tap="actSheetWXN(dataItem.Options, dataItem.Id, dataItem.Name, dataItem.ImageURL, 'playList')"
+                         src="{{dataItem.ImageURL}}" title="{{dataItem.Name}}" />
+                    <p class="slide_box_image_Text">{{dataItem.Name}}</p>
+                </div>
+            </div>
+
+            <!--*************************************************************************************************************************-->
+
+            <div id="line-1" class="col col-33">
+                <div id="line-1" class="horizontal-line-text">
+                    Favorites Albums
+                </div>
+
+                <ion-spinner icon="circles" class="spinner-energized" ng-class="{'spinner-energized': !myMusicWhatsFavoriteAlbumsData, 'hide_spinner': myMusicWhatsFavoriteAlbumsData}"></ion-spinner>
+
+                <div class="horizontal-line-text" ng-repeat="dataItem in myMusicWhatsFavoriteAlbums" id="album-wn-{{dataItem.Id}}">
+                    <img 
+                         on-hold="onimgTouch();imgtouchActive = !imgtouchActive"
+                         on-release="imgtouchActive=false"
+                         ng-class="{'slide_box_image_thumb_square': !imagesAreRound, 'slide_box_image_thumb_round':imagesAreRound}"
+                         on-tap="actSheetWXN(dataItem.Options, dataItem.Id, dataItem.Name, dataItem.ImageURL, 'album')"
+                         src="{{dataItem.ImageURL}}" title="{{dataItem.Name}}" />
+                    <p class="slide_box_image_Text">{{dataItem.Name}}</p>
+                </div>
+            </div>
+
+
+            <div id="line-1" class="col col-33">
+                <div id="line-1" class="horizontal-line-text">
+                    Favorites Playlists
+                </div>
+
+                <ion-spinner icon="circles" class="spinner-energized" ng-class="{'spinner-energized': !myMusicWhatsFavoritePlaylistsData, 'hide_spinner': myMusicWhatsFavoritePlaylistsData}"></ion-spinner>
+
+                <div class="horizontal-line-text" ng-repeat="dataItem in myMusicWhatsFavoritePlaylists" id="album-wn-{{dataItem.Id}}">
+                    <img on-hold="onimgTouch();imgtouchActive = !imgtouchActive"
+                         on-release="imgtouchActive=false"
+                         ng-class="{'slide_box_image_thumb_square': !imagesAreRound, 'slide_box_image_thumb_round':imagesAreRound}"
+                         on-tap="actSheetWXN(dataItem.Options, dataItem.Id, dataItem.Name, dataItem.ImageURL, 'album')"
+                         src="{{dataItem.ImageURL}}" title="{{dataItem.Name}}" />
+                    <p class="slide_box_image_Text">{{dataItem.Name}}</p>
+                </div>
+            </div>
+
+           
+        </div>
+
+        <div class="row">
+            <br />
+            <br />
+            <br />
+        </div>
+    </div>    

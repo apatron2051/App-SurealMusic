@@ -1,0 +1,1098 @@
+/* Empty. Add your own CSS if you like */
+
+/*default version*/
+@font-face {
+	font-family: 'ProximaNova';
+	src: 
+		local('ProximaNova'),
+		local('ProximaNova'),
+		url('../fonts/ProximaNova-Regular.otf') 
+		format('opentype');
+}
+/*bold 
+
+/* End Fonts
+*/
+.background_image {
+   
+   background-size: 100% 100%;
+
+    background-image: url("../img/background_image@3x.png");
+}
+
+.logo-center {
+  float :initial;
+  position:center;
+  align-content:center;
+  z-index: 33;
+  max-width:40vw;
+  padding-top:3vw;
+  padding-bottom:5vw;
+}
+
+.login-images {
+  float :inherit;
+  z-index: 33;
+  max-width:4vw;
+}
+
+.button-image {
+    border:none;
+   background:rgba(0,0,0,0);
+
+}
+
+.button-img {
+    border:none;
+   background:rgba(0,0,0,0);
+
+}
+
+
+
+
+.content_panel {
+  float:initial;
+  position:center;
+  padding-left:5vw;
+  padding-right:5vw;
+  height: 100%;
+  margin-top: 0;
+   background:rgba(0,0,0,0);
+  z-index: 1;
+}
+
+.sub-panel {
+   
+    background:rgba(255,255,255,0);
+       background-color: transparent!important;
+      border-color: transparent!important;
+}
+
+.navBar{
+  height: 30px !important;
+      background:rgba(0,0,0,0);
+}
+
+
+
+.social-networks {
+  float :inherit;
+  position:center;
+  align-content:center;
+  background:transparent;
+  padding-top:10vw;
+}
+
+.login-social-images {
+    
+  align-content:center;
+  z-index: 33;
+  vertical-align:top;
+  margin-left:0px;
+  max-width:75vw;
+  padding-top:0;
+    background:rgba(0,0,0,0);
+       background-color: transparent!important;
+      border-color: transparent!important;
+}
+
+
+.sign-in-btn {
+  float :initial;
+  position:center;
+  align-content:center;
+  z-index: 33;
+  max-width:250px;
+  padding-top:5vw;
+  padding-bottom:5vw;
+
+   
+
+}
+
+
+.login-fields {
+  float :initial;
+  display:block;
+  z-index: 33;
+
+}
+
+.text-style-body {
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+  text-align: center;
+
+  	font-family: "ProximaNova";
+	font-size: 4.7vw;
+  text-transform: none;
+  text-decoration: none;
+  color: #bbb;
+  letter-spacing: normal;
+      background:rgba(0,0,0,0);
+
+}
+
+.text-style-body-alert
+{
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+  text-align: center;
+  	font-family: "ProximaNova";
+	font-size: 4.7vw;
+  text-transform: none;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: normal;
+      background:rgba(0,0,0,0);
+        transition: .8s ease-in-out;
+
+}
+.text-style-body-small {
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+  text-align: center;
+
+  	font-family: "ProximaNova";
+	font-size: 2.7vw;
+  text-transform: none;
+  text-decoration: none;
+  color: #bbb;
+  letter-spacing: normal;
+      background:rgba(0,0,0,0);
+}
+
+.text-style-input {
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+  text-align: left;
+	font-family: "ProximaNova";
+	font-size: 5.2vw;
+  text-transform: none;
+  text-decoration: none;
+  color: #bbb;
+  letter-spacing: normal;
+      background:rgba(0,0,0,0);
+}
+
+.text-style-button {
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+  text-align: center;
+	font-family: "ProximaNova";
+	font-size: 5vw;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #f0f0f0;
+  letter-spacing: 0.05em;
+      background:rgba(0,0,0,0);
+
+}
+
+
+/**************************************************Login Input************************************************************************/
+
+//* input#txt_email {position:relative; font-size: 4.5vw; left:25px; background :transparent; color:#fff; border:none}
+input#txt_password {position:relative; font-size: 4.5vw; left:25px;background :transparent; color:#fff; border:none}
+    */
+
+
+/* ng-empty
+ng-not-empty
+ng-touched
+ng-untouched
+ng-valid
+ng-invalid
+ng-dirty
+ng-pending
+ng-pristine */
+
+
+    
+input
+{
+    margin: 0;
+    text-indent: 0;
+    text-align: left;
+    font-family: "ProximaNova";
+    font-size: 4.5vw;
+    text-decoration: none;
+    color:#bbb;
+    letter-spacing: 0.1em;
+    background-color: rgba(0, 0, 0, 0.2) ;  
+    position:relative; 
+    left:5px;
+    width:100%;
+}
+
+input.ng-empty
+{
+    margin: 0;
+    text-indent: 0;
+    text-align: left;
+    font-family: "ProximaNova";
+    font-size: 4.5vw;
+    text-decoration: none;
+    color: #bbb;
+    letter-spacing: 0.1em;
+    background-color: rgba(0, 0, 0, 0.2);  
+    position:relative; 
+    left:5px;
+    width:100%;
+}
+
+
+input.ng-untouched
+{
+    margin: 0;
+    text-indent: 0;
+    text-align: left;
+    font-family: "ProximaNova";
+    font-size: 4.5vw;
+    text-decoration: none;
+    color: #bbb;
+    letter-spacing: 0.1em;
+    background-color: rgba(0, 0, 0, 0.2);  
+    position:relative; 
+    left:5px;
+    width:100%;
+}
+
+input.ng-touched
+{
+    margin: 0;
+    text-indent: 0;
+    text-align: left;
+    font-family: "ProximaNova";
+    font-size: 4.5vw;
+    text-decoration: none;
+    color: #bbb;
+    letter-spacing: 0.1em;
+    background-color: rgba(0, 0, 0, 0.2);  
+    position:relative; 
+    left:5px;
+    width:100%;
+}
+
+input.ng-invalid
+{
+    margin: 0;
+    text-indent: 0;
+    text-align: left;
+    font-family: "ProximaNova";
+    font-size: 4.5vw;
+    text-decoration: none;
+    color:#bbb;
+    letter-spacing: 0.1em;
+    background-color: rgba(255, 0, 0, 0.1) ;  
+    position:relative; 
+    left:5px;
+    width:100%;
+}
+
+
+input.ng-valid
+{
+    margin: 0;
+    text-indent: 0;
+    text-align: left;
+    font-family: "ProximaNova";
+    font-size: 4.5vw;
+    text-decoration: none;
+    color:#bbb;
+    letter-spacing: 0.1em;
+    background-color: rgba(0, 0, 0, 0.1);  
+    position:relative; 
+    left:5px;
+    width:100%;
+}
+
+
+input.ng-dirty
+{
+    margin: 0;
+    text-indent: 0;
+    text-align: left;
+    font-family: "ProximaNova";
+    font-size: 4.5vw;
+    text-decoration: none;
+    color:#bbb;
+    letter-spacing: 0.1em;
+    background-color: rgba(0, 0, 0, 0.2) ;  
+    position:relative; 
+    left:5px;
+    width:100%;
+}
+
+input.ng-not-empty
+{
+    margin: 0;
+    text-indent: 0;
+    text-align: left;
+    font-family: "ProximaNova";
+    font-size: 4.5vw;
+    text-decoration: none;
+    color:#bbb;
+    letter-spacing: 0.1em;
+    background-color: rgba(0, 0, 0, 0.2);  
+    position:relative; 
+    left:5px;
+    width:100%;
+}
+
+
+/**************************************************************************************************************************/
+
+.text-style-input-label {
+  margin: 0;
+  text-indent: 0;
+  text-align: left;
+  font-family: "ProximaNova";
+  font-size: 3.5vw;
+  text-decoration: none;
+  color: #bbb;
+  letter-spacing: 0.1em;
+  background:rgba(0,0,0,0);
+}
+
+.text-style-social-networks {
+  margin: 0;
+  text-indent: 0;
+  padding:0;
+  text-align: center;
+  font-family: "ProximaNova";
+  font-size: 3.5vw;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #bbb;
+  letter-spacing: 0.1em;
+  padding-bottom:2vw;
+  background:rgba(0,0,0,0);
+}
+
+
+.text-style-home {
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+  text-align: center;
+
+  	font-family: "ProximaNova";
+	font-size: 4.0vw;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: normal;
+      background:rgba(0,0,0,0);
+}
+
+.text-style-title {
+  margin: 0;
+  padding: 1vw;
+  text-indent: 0;
+  text-align: center;
+  font-family: "ProximaNova";
+  font-size: 5vw;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 0.05em;
+}
+
+.title-text
+{
+  margin: 0;
+  font-family: "ProximaNova";
+  font-size: 5vw;
+  text-transform: none;
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 0.05em;
+  text-align:center;
+  border:none;
+    color:#fff
+
+}
+
+.text-style-title-transparent{
+    
+     background-color: transparent!important;
+      border-color: transparent!important;
+         color:#fff
+}
+
+/******************************Positioning ****************************************/
+.horizontal-block-5{
+     background:rgba(255,255,255,1);
+     display:block;
+     padding:5vw;
+    
+}
+
+.horizontal-block-3{
+     background:rgba(255,255,255,1);
+     display:block;
+     padding:3vw;
+    
+}
+
+.div-center {
+  position:center;
+  align-content:center;
+   background:rgba(255,255,255,0);
+  width:100vw;
+}
+
+
+/************************Colors/ Graphics*******************************/
+.sureal-blue {
+  color: #00a6ff;
+}
+
+.home_image{
+    vertical-align:middle;
+   align-content:center;
+
+    max-width:80%;
+    max-height:80%;
+}
+
+
+.left_nav_image{
+    vertical-align:middle;
+   align-content:center;
+
+    width:30%;
+    height:30%;
+}
+
+/*!
+ * **************************************************************************Navigation Image*/
+.nav_Home_off {
+    background-image: url(../img/nav_home@2x.png);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 31px; 
+}
+
+.nav_Home_on {
+    background-image: url(../img/nav_home_active@2x.png);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 31px; 
+}
+
+.nav_Artists_off {
+    background-image: url(../img/nav_artists@2x.png);
+    background-repeat: no-repeat;
+        background-position: 50%;
+    background-size: 31px; 
+}
+
+.nav_Artists_on {
+    background-image: url(../img/nav_artists_active@2x.png);
+    background-repeat: no-repeat;
+        background-position: 50%;
+    background-size: 31px; 
+}
+
+
+
+.nav_MyMusic_off {
+    background-image: url(../img/nav_my_music@2x.png);
+    background-repeat: no-repeat;
+        background-position: 50%;
+    background-size: 31px; 
+}
+
+.nav_MyMusic_on {
+    background-image: url(../img/nav_my_music_active@2x.png);
+    background-repeat: no-repeat;
+        background-position: 50%;
+    background-size: 31px; 
+}
+
+
+
+.nav_nowPlaying_off {
+    background-image: url(../img/nav_nowplaying@2x.png);
+    background-repeat: no-repeat;
+        background-position: 50%;
+    background-size: 31px; 
+}
+
+.nav_nowPlaying_on {
+    background-image: url(../img/nav_nowplaying_active@2x.png);
+    background-repeat: no-repeat;
+        background-position: 50%;
+    background-size: 31px; 
+}
+
+
+
+.nav_Settings_off {
+    background-image: url(../img/nav_settings@2x.png);
+    background-repeat: no-repeat;
+        background-position: 50%;
+    background-size: 31px; 
+}
+
+.nav_Settings_on {
+    background-image: url(../img/nav_settings_active@2x.png);
+    background-repeat: no-repeat;
+        background-position: 50%;
+    background-size: 31px; 
+}
+
+.horizontal-line{
+    vertical-align:middle;
+   align-content:center;
+
+    /* these two need to be changed in final version to reflect proper image being used. This is for demo only. Change as needed*/
+     width:100%;
+      height:2px;
+      /*background-image:url(../img/line.png);*/
+}
+
+
+.horizontal-line-text{
+  margin: 0;
+  text-indent: 0;
+  vertical-align:top;
+  text-align: center;
+  font-family: "ProximaNova";
+  font-size: 4vw;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  /*background-color:black;*/
+  letter-spacing: 0.05em;
+}
+
+.horizontal-line-text-large{
+  margin: 0;
+  text-indent: 0;
+  vertical-align:top;
+  text-align: center;
+  font-family: "ProximaNova";
+  font-size: 3vw;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  /*background-color:black;*/
+  letter-spacing: 0.05em;
+}
+
+
+.horizontal-line-album-text-large{
+  margin: 0;
+  text-indent: 0;
+  vertical-align:top;
+  text-align: center;
+  font-family: "ProximaNova";
+  font-size: vw;
+  text-transform: none;
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 0.05em;
+}
+
+/*******************/
+
+.horizontal-line-text-small{
+ margin: 0;
+  text-indent: 0;
+  vertical-align:top;
+  text-align: center;
+	font-family: "ProximaNova";
+	font-size: 3.3vw;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  /*background-color:black;*/
+  letter-spacing: 0.05em;
+}
+
+/*************************slide box*/
+.slide_box_style_1 {
+   height: 250px;
+   border: none;
+    align-content:center;
+}
+
+.slide_box_style_2 {
+   height: 100px;
+   border: none;
+    align-content:center;
+}
+
+.slide_box_style_3 {
+   height: 150px;
+   border: none;
+    align-content:center;
+}
+.slide_box_image{
+    vertical-align:top;
+   align-content:center;
+
+    /* these two need to be changed in final version to reflect proper image being used. This is for demo only. Change as needed*/
+    max-width:100%;
+      max-height:100%;
+}
+
+.slide_box_image_thumb{
+    vertical-align:top;
+   align-content:center;
+
+    /* these two need to be changed in final version to reflect proper image being used. This is for demo only. Change as needed*/
+    max-width:20%;
+      max-height:20%;
+}
+
+.slide_box_image_thumb_round{
+    vertical-align:middle;
+   align-content:center;
+    /* these two need to be changed in final version to reflect proper image being used. This is for demo only. Change as needed*/
+   width:14vw;
+   height:14vw;
+   border-radius: 50%;
+}
+
+.slide_box_image_thumb_round_small
+{
+   vertical-align:middle;
+   align-content:center;
+    /* these two need to be changed in final version to reflect proper image being used. This is for demo only. Change as needed*/
+   width:19vw;
+   height: 19vw;
+   border-radius: 50%;
+}
+
+.slide-box-container {
+    width:25%;
+    display:inline-block;
+    background:rgba(255,255,255,0);
+}
+
+
+.slide-box-container-singleLine 
+{
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+
+}
+
+.actionSheet_image_thumb_round_small
+{
+    vertical-align:middle;
+
+    /* these two need to be changed in final version to reflect proper image being used. This is for demo only. Change as needed*/
+    width:22vw;
+    height:22vw;
+    border-radius: 50%;
+}
+
+
+.hide_spinner {
+    display: none;
+
+}
+
+
+.actionImage {
+   position: relative;
+   top: -30px;
+   width:30%;
+   height:30%;
+   opacity:0.9;
+}
+.slide_box_image_container {
+   position: relative;
+   top: -30px;
+   font-family: "ProximaNova";
+	font-size: 2.5vw;
+  text-decoration: none;
+    text-transform: none;
+  color: #fff;
+  letter-spacing: 0.1em;
+}
+
+.slide_box_image_Text{
+	font-family: "ProximaNova";
+	font-size: 2.5vw;
+  text-decoration: none;
+    text-transform: none;
+  color: #fff;
+  letter-spacing: 0.1em;
+}
+
+
+.profile-container {
+    width:55%;
+    display:inline-block;
+    background:rgba(255,255,255,0);
+}
+
+.wide-as-needed {
+overflow-x:scroll;
+  white-space: nowrap;
+ 
+}
+
+.image-graph {
+    vertical-align:middle;
+   
+    width:100%;
+    height:100%
+
+}
+
+
+/*******************************************************************************************************/
+ /* Mini Player Begin */
+ 
+
+
+.mini-player-bar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: 9;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0px;
+  width: 100%;
+  height: 10vh;
+  border-width: 0;
+  border-style: solid;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid #ddd;
+  /* border-width: 1px will actually create 2 device pixels on retina */
+  /* this nifty trick sets an actual 1px border on hi-res displays */
+  background-size: 0; }
+  @media (min--moz-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+    .mini-player-bar {
+      border: noneh
+      background-image: linear-gradient(0deg, #ddd, #ddd 50%, transparent 50%);
+      background-position: bottom;
+      background-size: 100% 1px;
+      background-repeat: no-repeat; } }
+
+  .mini-player-bar-footer {
+  bottom: 0;
+  border-top-width: 1px;
+  border-bottom-width: 0;
+  background-position: top;
+  height: 10vh; }
+  .bar-footer.item-input-inset {
+    position: absolute; }
+
+
+   .mini-player-bar .title {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 0;
+    overflow: hidden;
+    margin: 0 10px;
+    min-width: 30px;
+    height: 10vh;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 44px; }
+
+.mini-player-background {
+  background:rgba(0,0,0,1);
+}
+
+.image-mini-player-large {
+   
+    width:80%;
+    height:80%;
+      vertical-align:top;
+
+}
+
+.image-mini-player-medium {
+
+
+    width:20%;
+    height:20%;
+      vertical-align:middle;
+
+}
+
+.image-mini-player-cntrl
+{     
+      vertical-align:middle;
+      align-content:center;  
+}
+
+
+.text-style-mini-player-song {
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+  text-align: center;
+
+  	font-family: "ProximaNova";
+	font-size: 3.0vw;
+  text-transform: none;
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: normal;
+      background:rgba(0,0,0,0);
+}
+
+/*******************************************************************************************************/
+ /* Mini Player end */
+/*******************************************************************************************************/
+ 
+
+/*******************************************************************************************************/
+ /* Player Begin */
+ /*******************************************************************************************************/
+
+.player_image_thumb_round
+{
+    vertical-align:middle;
+   align-content:center;
+   margin-left:2vw;
+   margin-top:2vw;
+    /* these two need to be changed in final version to reflect proper image being used. This is for demo only. Change as needed*/
+
+    /* these two need to be changed in final version to reflect proper image being used. This is for demo only. Change as needed*/
+   width:40vw;
+   height:40vw;
+   border-radius: 50%;
+
+}
+ 
+.text-style-player-song {
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+  text-align: center;
+
+  	font-family: "ProximaNova";
+	font-size: 5.0vw;
+  text-transform: none;
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: normal;
+      background:rgba(0,0,0,0);
+}
+
+
+
+.text-style-player-artist {
+    margin: 0;
+    padding: 1vw;
+    text-indent: 0;
+    text-align: center;
+    font-family: "ProximaNova";
+    font-size: 3vw;
+    text-transform: none;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 0.05em;
+}
+
+.image-player-large {
+   
+    width:30%;
+    height:30%;
+      vertical-align:middle;
+
+}
+
+.image-player-medium {
+
+
+    width:20%;
+    height:20%;
+      vertical-align:middle;
+
+}
+.image-player-small {
+   
+    width:30%;
+    height:30%;
+      vertical-align:middle;
+
+}
+.image-player-tiny {
+   
+    width:5%;
+    height:5%;
+      vertical-align:middle;
+
+}
+
+.image-player-cntrl
+{     position:center;
+      vertical-align:middle;
+      align-content:center;  
+}
+
+/*************************************Round Progress bar for player*/
+ .cf:before,
+        .cf:after {
+            content: " ";
+            display: table;
+        }
+
+        .cf:after {
+            clear: both;
+        }
+
+        .progress-wrapper{
+            position: relative;
+            font-size: 40px;
+        }
+
+        .progress{
+            position: absolute;
+            color: #bbb;
+            font-weight: 100;
+            line-height: 1;
+        }
+
+
+/*******************************************************************************************************/
+/*************************************Player END***********************************************/
+
+/*******************************************************************************************************/
+
+
+.popupBarHeader-hide {
+    height:0.1vw;
+}
+
+.popupBarHeader-open {
+
+height:10vw;
+}
+
+/*******************************************************************************************************/
+ /* SLiding Tabs Below supports 3 tabs only - Begin*/
+ 
+ul li {
+  display: inline;
+  text-align: center;
+
+}
+
+.a_class {
+  display: inline-block;
+  width: 100%;
+  padding: 0.25vw;
+  margin: 0;
+  	font-family: "ProximaNova";
+	font-size: 5vw;
+  text-decoration: none;
+    color: #fff;
+      text-align: center;
+}
+.a_class:active
+{
+    font-size: 6vw;
+  text-decoration: none;
+    color: #fff;
+}
+
+.a_class:visited
+{
+    font-size: 6vw;
+  text-decoration: none;
+    color: #fff;
+}
+
+.hrLine {
+  
+  height: 3px;
+  width: 100%;
+  margin: 0;
+ 
+  background: #42A5F5;
+  border: none;
+  transition: .3s ease-in-out;
+}
+
+
+.hrLineThin {
+  
+  height: 1px;
+  width: 100%;
+  margin: 0;
+ 
+  background: #42A5F5;
+  border: none;
+  transition: .3s ease-in-out;
+}
+
+
+ /* SLiding Tabs Below - End*/
+/*******************************************************************************************************/
+
+
+
+        /*******************SIDE MENU Effects*/
+ 
+    body.menu-open .side-menu-open{
+      transform: translate3d(175px, 0px, 0px) scale(.85)!important;
+      opacity: 0.9;
+      -webkit-filter: blur(2px);
+      filter: blur(2px);
+      transform-origin: center center;
+      
+    }
+
+
+    body.menu-open ion-side-menus, body.menu-open ion-side-menu{
+     background-size: 100% 100%;
+
+    background-image: url("../images/blueBackgound.png");
+   /* background: #11c1f3 */
+    }
+
+
+    ion-side-menu.menu-left-axis ion-item.item a.item-content, ion-side-menu.menu-left-axis ion-item.item{
+      background-color: transparent!important;
+      border-color: transparent!important;
+      color:#fff;
+      width:100%;
+    }
+  
+
+    /*****************************************************/
+      iframe.noScrolling{
+           width: 80%; /*or any other size*/
+           height: auto; /*or any other size*/
+           overflow: hidden;
+        }

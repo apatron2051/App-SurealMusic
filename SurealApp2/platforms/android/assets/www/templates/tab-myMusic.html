@@ -1,0 +1,246 @@
+
+<ion-view view-title="Show Case" style="background-color:black" class="background_image">
+    <ion-nav-title>
+        <p class="text-style-title"> Showcase </p>
+    </ion-nav-title>
+    <ion-content  class="content_panel" overflow-scroll="true">
+
+        <div id="myMusicShowCaseCtrl" ng-controller="myMusicShowCaseCtrl">
+            <div id="image-carousel" class="row">
+                <div id="player-1" class="col">
+                    <ion-slide-box id="showcaseSlideBox" does-continue="true" auto-play="true" show-pager="true" class="slide_box_style_1">
+                        <ion-slide ng-repeat="myMusicSliderImage in myMusicSliderImages" href="#/app/myMusic/{{myMusicSliderImage.id}}">
+                            <center>
+                                <img class="slide_box_image" on-hold="actSheetSlider(myMusicSliderImage.Options, myMusicSliderImage.id,myMusicSliderImage.Name, myMusicSliderImage.ImageURL, 'album')" src="{{myMusicSliderImage.ImageURL}}" />
+                            </center>
+                        </ion-slide>
+                    </ion-slide-box>
+
+                </div>
+            </div>
+          </div>
+
+            <!--**********************************************************************************************************-->
+            <!--- TRENDING -->
+
+            <div id="whatsnew" class="row">
+                <div class="col">
+                    <a class="horizontal-line-text-small"><center>TRENDING</center></a>
+                    <div class="hrLine"> </div>
+                </div>
+            </div>
+
+
+            <!--**********************************************************************************************************-->
+            <!--- Trending Tabs and Images (slidebox) -->
+
+            <div id="trending" ng-controller="myMusicTrendingCtrl">
+
+
+                <div id="line-whatsNew" class="row">
+                    <div id="line-1" class="col col-33">
+                        <img class="horizontal-line" src="img/line.png" />
+                    </div>
+                    <div id="line-1" class="col col-33 horizontal-line-text-small">
+                        ALBUMS
+                    </div>
+                    <div id="line-1" class="col col-33">
+                        <img class="horizontal-line" src="img/line.png" />
+                    </div>
+                </div>
+
+                <ion-slide-box delegate-handle="trendingAlbumsSlideBox" id="trendingAlbumsSlideBox" does-continue="true" auto-play="false" show-pager="false">
+
+                    <ion-slide id="whatsNewSlide" ng-repeat="data in myMusicTrendingAlbums">
+                        <ion-spinner icon="circles" class="spinner-energized" ng-class="{'spinner-energized': !myMusicTrendingAlbumsData, 'hide_spinner': myMusicTrendingAlbumsData}"></ion-spinner>
+
+                        <div class="row">
+                            <div class="{{ItemCol}} slide-box-container-singleLine animated bounceIn" ng-repeat="dataItem in data.slide" id="album-wn-{{dataItem.Id}}">
+                                <img on-hold="onimgToduch();imgtouchActive = !imgtouchActive"
+                                     on-release="imgtouchActive=false"
+                                     ng-class="{'slide_box_image_thumb_square': !imagesAreRound, 'slide_box_image_thumb_round':imagesAreRound}"
+                                     on-tap="actSheetWXN(dataItem.Options, dataItem.Id, dataItem.Name, dataItem.ImageURL, 'album')"
+                                     src="{{dataItem.ImageURL}}" title="{{dataItem.Name}}" />
+                                <p class="slide_box_image_Text">{{dataItem.Name}}</p>
+                            </div>
+                        </div>
+                    </ion-slide>
+                </ion-slide-box>
+
+
+                <div id="line-whatsNew" class="row">
+                    <div id="line-1" class="col col-33">
+                        <img class="horizontal-line" src="img/line.png" />
+                    </div>
+                    <div id="line-1" class="col col-33 horizontal-line-text-small">
+                        SONGS
+                    </div>
+                    <div id="line-1" class="col col-33">
+                        <img class="horizontal-line" src="img/line.png" />
+                    </div>
+                </div>
+
+                <ion-slide-box delegate-handle="trendingSongsSlideBox" id="trendingSongsSlideBox" does-continue="true" auto-play="false" show-pager="false">
+
+                    <ion-slide id="whatsNewSlide" ng-repeat="data in myMusicTrendingSongs">
+                        <ion-spinner icon="circles" class="spinner-energized" ng-class="{'spinner-energized': !myMusicTrendingSongssData, 'hide_spinner': myMusicTrendingSongssData}"></ion-spinner>
+
+
+                        <div class="row">
+                            <div class="{{ItemCol}} slide-box-container-singleLine  animated bounceIn" ng-repeat="dataItem in data.slide" id="album-wn-{{dataItem.Id}}">
+                                <img on-hold="onimgToduch();imgtouchActive = !imgtouchActive"
+                                     on-release="imgtouchActive=false"
+                                     ng-class="{'slide_box_image_thumb_square': !imagesAreRound, 'slide_box_image_thumb_round':imagesAreRound}"
+                                     on-tap="actSheetWXN(dataItem.Options, dataItem.Id, dataItem.Name, dataItem.ImageURL, 'album')"
+                                     src="{{dataItem.ImageURL}}" title="{{dataItem.Name}}" />
+                                <p class="slide_box_image_Text">{{dataItem.Name}}</p>
+                            </div>
+                        </div>
+                    </ion-slide>
+                </ion-slide-box>
+
+
+
+                <div id="line-whatsNew" class="row">
+                    <div id="line-1" class="col col-33">
+                        <img class="horizontal-line" src="img/line.png" />
+                    </div>
+                    <div id="line-1" class="col col-33 horizontal-line-text-small">
+                        ARTISTS
+                    </div>
+                    <div id="line-1" class="col col-33">
+                        <img class="horizontal-line" src="img/line.png" />
+                    </div>
+                </div>
+
+                <ion-slide-box delegate-handle="trendingArtistsSlideBox" id="trendingArtistsSlideBox" does-continue="true" auto-play="false" show-pager="false">
+
+                    <ion-slide id="whatsNewSlide" ng-repeat="data in myMusicTrendingArtists">
+                        <ion-spinner icon="circles" class="spinner-energized" ng-class="{'spinner-energized': !myMusicTrendingArtistsData, 'hide_spinner': myMusicTrendingArtistsData}"></ion-spinner>
+
+
+                        <div class="row">
+                            <div class="{{ItemCol}} slide-box-container-singleLine  animated bounceIn" ng-repeat="dataItem in data.slide" id="album-wn-{{dataItem.Id}}">
+                                <img on-hold="onimgToduch();imgtouchActive = !imgtouchActive"
+                                     on-release="imgtouchActive=false"
+                                     ng-class="{'slide_box_image_thumb_square': !imagesAreRound, 'slide_box_image_thumb_round':imagesAreRound}"
+                                     on-tap="actSheetWXN(dataItem.Options, dataItem.Id, dataItem.Name, dataItem.ImageURL, 'album')"
+                                     src="{{dataItem.ImageURL}}" title="{{dataItem.Name}}" />
+                                <p class="slide_box_image_Text">{{dataItem.Name}}</p>
+                            </div>
+                        </div>
+
+
+                    </ion-slide>
+                </ion-slide-box>
+
+            </div>
+
+
+
+            <!--**********************************************************************************************************-->
+            <!--**********************************************************************************************************-->
+            <!--- Whats New Tabs and Images (slidebox) -->
+            <div id="controller" ng-controller="myMusicWhatsNewCtrl">
+                <div id="WhatsNew">
+                    <div id="whatsnew" class="row">
+                        <div class="col">
+                            <a class="horizontal-line-text-small"><center>WHATS NEW</center></a>
+                            <div class="hrLine"> </div>
+                        </div>
+                    </div>
+
+                    <div id="line-whatsNew" class="row">
+                        <div id="line-1" class="col col-33">
+                            <img class="horizontal-line" src="img/line.png" />
+                        </div>
+                        <div id="line-1" class="col col-33 horizontal-line-text-small">
+                            ALBUMS
+                        </div>
+                        <div id="line-1" class="col col-33">
+                            <img class="horizontal-line" src="img/line.png" />
+                        </div>
+                    </div>
+
+                    <!--***************************************************************************************************************************-->
+
+                    <ion-spinner icon="circles" class="spinner-energized" ng-class="{'spinner-energized': !myMusicWhatsNewAlbumsData, 'hide_spinner': myMusicWhatsNewAlbumsData}"></ion-spinner>
+
+                    <ion-slide-box delegate-handle="whatsNewSlideBoxAlbum" id="whatsNewSlideBox" does-continue="true" auto-play="false" show-pager="false">
+
+                        <ion-slide id="whatsNewSlide" ng-repeat="data in myMusicWhatsNewAlbums">
+                            <ion-spinner icon="circles" class="spinner-energized" ng-class="{'spinner-energized': !myMusicWhatsNewAlbumsData, 'hide_spinner': myMusicWhatsNewAlbumsData}"></ion-spinner>
+
+
+                            <div class="row">
+                                <div class="{{ItemCol}} slide-box-container-singleLine  animated bounceIn" ng-repeat="dataItem in data.slide" id="album-wn-{{dataItem.Id}}">
+                                    <img on-hold="onimgToduch();imgtouchActive = !imgtouchActive"
+                                         on-release="imgtouchActive=false"
+                                         ng-class="{'slide_box_image_thumb_square': !imagesAreRound, 'slide_box_image_thumb_round':imagesAreRound}"
+                                         on-tap="actSheetWXN(dataItem.Options, dataItem.Id, dataItem.Name, dataItem.ImageURL, 'album')"
+                                         src="{{dataItem.ImageURL}}" title="{{dataItem.Name}}" />
+                                    <p class="slide_box_image_Text">{{dataItem.Name}}</p>
+                                </div>
+                            </div>
+
+
+                        </ion-slide>
+                    </ion-slide-box>
+
+
+
+                    <!--*************************************************************************************************************************-->
+                    <div id="line-whatsNew" class="row">
+                        <div id="line-1" class="col col-33">
+                            <img class="horizontal-line" src="img/line.png" />
+                        </div>
+                        <div id="line-1" class="col col-33 horizontal-line-text-small">
+                            PLAYLISTS
+                        </div>
+                        <div id="line-1" class="col col-33">
+                            <img class="horizontal-line" src="img/line.png" />
+                        </div>
+                    </div>
+
+
+                    <ion-spinner icon="circles" class="spinner-energized" ng-class="{'spinner-energized': !myMusicWhatsNewPlaylistData, 'hide_spinner': myMusicWhatsNewPlaylistData}"></ion-spinner>
+
+                    <ion-slide-box delegate-handle="whatsNewSlideBoxPlaylist" id="whatsNewSlideBox" does-continue="true" auto-play="false" show-pager="false">
+
+                        <ion-slide id="whatsNewSlide" ng-repeat="data in myMusicWhatsNewPlaylists">
+                            <ion-spinner icon="circles" class="spinner-energized" ng-class="{'spinner-energized': !myMusicWhatsNewPlaylistData, 'hide_spinner': myMusicWhatsNewPlaylistData}"></ion-spinner>
+
+
+                            <div class="row">
+                                <div class="{{ItemCol}} slide-box-container-singleLine  animated bounceIn" ng-repeat="dataItem in data.slide" id="album-wn-{{dataItem.Id}}">
+                                    <img on-hold="onimgToduch();imgtouchActive = !imgtouchActive"
+                                         on-release="imgtouchActive=false"
+                                         ng-class="{'slide_box_image_thumb_square': !imagesAreRound, 'slide_box_image_thumb_round':imagesAreRound}"
+                                         on-tap="actSheetWXN(dataItem.Options, dataItem.Id, dataItem.Name, dataItem.ImageURL, 'playList')"
+                                         src="{{dataItem.ImageURL}}" title="{{dataItem.Name}}" />
+                                    <p class="slide_box_image_Text">{{dataItem.Name}}</p>
+                                </div>
+                            </div>
+
+
+                        </ion-slide>
+                    </ion-slide-box>
+                </div>
+            </div>
+            <!--*************************************************************************************************************************-->
+            <div class="background_transparent" ng-include src="'templates/myEventsListContent.html'"></div>
+
+            <div class="background_transparent" ng-include src="'templates/myMusicListsContent.html'"></div>
+
+            <div class="background_transparent" ng-include src="'templates/bottomSpacer.html'"></div>
+</ion-content>  
+
+
+    <div ng-controller="MusicPlayerCtrl">
+        <ion-pull-up-footer  class="mini-player-background"  hide-Header="myMusicPullUpFooter" initial-state="collapsed" default-behavior="expand">
+            <div class="title" id="myMusicPullUpFooter" name="myMusicPullUpFooter"  ion-pull-up-trigger  ng-include src="'templates/miniPlayerHeader.html'"></div>
+        </ion-pull-up-footer>
+    </div>
+   
+     
+</ion-view>

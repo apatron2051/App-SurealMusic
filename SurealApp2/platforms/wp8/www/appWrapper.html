@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <meta http-equiv="Content-Security-Policy" />
+    <meta http-equiv="Content-Security-Policy" />
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet"> -->
+
+
+    <script src="js/platformOverrides.js"></script>
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <!--Plugins--->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="js/ng-cordova.min.js"></script>
+    <script src="cordova.js"></script>
+
+    <!-- Round ProgressBar Files for Player-->
+    <!-- <script src="lib/angular-svg-round-progressbar/build/roundProgress.min.js"></script>-->
+    <!-- Round ProgressBar Files for Player-->
+    <script src="js/roundProgress.js"></script>
+
+    <!-- browser transition support-->
+    <script src="lib/ionic-native-transitions/dist/ionic-native-transitions.min.js"></script>
+
+    <!-- css animations-->
+    <link href="css/animate.min.css" rel="stylesheet" />
+
+    <!--Music Player -->
+    <script src="lib/ionic-audio/dist/ion-audio.js"></script>
+
+    <!-- <script src="js/tabSlideBox.js"></script>
+       <link href="css/tabSlideBox.css" rel="stylesheet" />
+
+        -->
+    <!--Audio Player-->
+    <!-- browser audio support-->
+    <script src="js/browserPolyfill.js"></script>
+
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/surealAPI.js"></script>
+
+
+</head>
+<body ng-app="surealMusic">
+   <div style="height:90vh; width:100vw">
+       
+   <iframe frameborder="0" style="height:100%; width:100%" src="surealMusic.html"></iframe>
+  </div>
+  <div style="height:10vh" ng-controller="MusicPlayerCtrl">
+      <div class="background_image">
+
+          <div overflow-scroll="false">
+              <!--     <button ng-click="increment();">Increment</button>
+            <button ng-click="decrement();">Decrement</button>
+            <button ng-click="increment(10);">Increment 10</button>
+            <button ng-click="decrement(10);">Decrement 10</button> -->
+
+              <ion-audio-track track="dynamicTrack" toggle-playback="togglePlayback">
+                  <div id="musicPlayer" class="row">
+                      <div id="back" class="col-30 image-player-cntrl">
+                          <img src="img/shuffle@2x.png" class="image-player-tiny" />
+                          <img src="img/previous@2x.png" class="image-player-medium" />
+                          <ion-audio-controls>
+                              <a ng-click="timerToggle(0)" class="image-player-medium">  <img src="{{playStateImage}}" class="image-player-medium" /> </a>
+                              <ion-spinner icon="ios"></ion-spinner>
+                          </ion-audio-controls>
+
+                          <img src="img/next@2x.png" class="image-player-medium" />
+
+                          <img src="img/repeat@2x.png" class="image-player-tiny" />
+                      </div>
+                      <div id="Time-1" class="text-style-player-song col-70">{{dynamicTrack.title}}, {{dynamicTrack.artist}}, {{ currentTime  }}{{ maxTime  }}</div>
+                  </div>
+              </ion-audio-track>
+          </div>
+
+
+
+      </div>
+  </div>
+</body>
+</html>
